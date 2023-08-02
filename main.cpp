@@ -60,7 +60,7 @@ int main(){
                 todoItem newItem(tokens[1], tokens[2], due, pri);
                 list.addItem(newItem);
                 list.sortBy("addition");
-                std::cout << "\nItem added successfully." << std::endl;
+                std::cout << "\nItem "<< tokens[1]<<" added successfully." << std::endl;
             }
             catch (priorityParsingException& e) {
                 cout << "invalid priority input, " << helper << endl;
