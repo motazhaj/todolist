@@ -1,5 +1,7 @@
 # Todo List CLI App Assignment *Requirements below.
-
+## not finished
+1. **weather integration:**
+2. **closer output to requirement**
 - `Example Output:`
 ```shell
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
