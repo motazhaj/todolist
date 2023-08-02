@@ -205,7 +205,7 @@ void todoList::deleteItem(int id){
 void todoList::display(){
     if(!items.empty()) {
         for (auto pair: items) {
-            std::cout << pair.first << " : ";
+            std::cout <<std::left <<std::setw(2) << pair.first << " : ";
             pair.second.displayItem();
         }
     }

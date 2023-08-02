@@ -59,7 +59,7 @@ int main(){
                 tm due = parseDate(tokens[3]);
                 todoItem newItem(tokens[1], tokens[2], due, pri);
                 list.addItem(newItem);
-
+                list.sortBy("addition");
                 std::cout << "\nItem added successfully." << std::endl;
             }
             catch (priorityParsingException& e) {
