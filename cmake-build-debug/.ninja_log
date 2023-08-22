@@ -1,0 +1,13 @@
+# ninja log v5
+0	619	7124756321224896	CMakeFiles/todolist.dir/main.cpp.obj	9025a13d57bd70db
+10	62	7124757005660224	CMakeFiles/todolist.dir/weather.cpp.obj	de032271023fc0c
+18	366	7124757008699558	CMakeFiles/todolist.dir/enumsParser.cpp.obj	207557e825326dc2
+7	458	7124757009621270	CMakeFiles/todolist.dir/date.cpp.obj	f48f9aa2e1eb0be7
+3	544	7124757010481281	CMakeFiles/todolist.dir/cParser.cpp.obj	ff22dc911007eb93
+23	587	7124757010909305	CMakeFiles/todolist.dir/todoItem.cpp.obj	bdc582e354049a0f
+14	999	7124757015008840	CMakeFiles/todolist.dir/todoList.cpp.obj	49f6ea5c434ddd09
+999	1175	7124757016741135	todolist.exe	40bdcb801a84bf01
+3	607	7124759185414733	CMakeFiles/todolist.dir/main.cpp.obj	9025a13d57bd70db
+608	789	7124759187192906	todolist.exe	40bdcb801a84bf01
+3	607	7124760317605354	CMakeFiles/todolist.dir/main.cpp.obj	9025a13d57bd70db
+607	777	7124760319263389	todolist.exe	40bdcb801a84bf01
