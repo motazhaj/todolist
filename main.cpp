@@ -1,4 +1,5 @@
 #include "todoListHeaders.h"
+#include "cParser.h"
 
 
 int main() {
@@ -28,7 +29,7 @@ int main() {
 
         cout << "Command: ";
         getline(std::cin, input);
-//        tokens = cParser::parse(input);
+        tokens = cParser::parse(input);
         command = tokens[0];
         cout << endl;
 
