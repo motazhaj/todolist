@@ -13,4 +13,5 @@ add_executable(todolist
         date.cpp
         enumParser.h
         enumParser.cpp
-        todoItem.cpp)
+        todoItem.cpp
+        todoList.cpp)
