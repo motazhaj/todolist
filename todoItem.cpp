@@ -22,17 +22,9 @@ progress todoItem::getProgress() const {
     return (itemProgress);
 }
 
-//void todoItem::setPriority(priority pri){
-//    itemPriority = pri;
-//}
-
 priority todoItem::getPriority() const {
     return(itemPriority);
 }
-
-//void todoItem::setDueDate(tm due){
-//    dueDate = due;
-//}
 
 tm todoItem::getDueDate() const {
     return (dueDate);
