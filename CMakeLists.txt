@@ -12,4 +12,6 @@ add_executable(todolist
         todoListHeaders.h
         date.cpp
         enumParser.h
-        enumParser.cpp)
+        enumParser.cpp
+        todoItem.cpp
+        todoList.cpp)
