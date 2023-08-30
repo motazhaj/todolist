@@ -9,4 +9,5 @@ add_executable(todolist
         cParser.cpp
         cParser.h
         main.cpp
-        todoListHeaders.h)
+        todoListHeaders.h
+        date.cpp)
