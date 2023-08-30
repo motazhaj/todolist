@@ -20,10 +20,10 @@ int main() {
 
     cout << divider << "Todo List version: " << version << endl; //Version Number
 
-    //load saved txt file
+//    load saved txt file
     cout << "\nLoading..." << endl;
     try {
-//        list = todoList::load();
+        list = todoList::load();
         cout << "\nList loaded successfully." << endl;
     }
     catch (loadException &) {
