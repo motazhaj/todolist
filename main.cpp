@@ -35,25 +35,35 @@ int main() {
 
         if (command == "quit") {
             break;
-        } else if (command == "add") {
+        }
+        else if (command == "add") {
 
-        } else if (command == "edit") {
+        }
+        else if (command == "edit") {
 
-        } else if (command == "progress") {
+        }
+        else if (command == "progress") {
 
-        } else if (command == "delete") {
+        }
+        else if (command == "delete") {
 
-        } else if (command == "show") {
+        }
+        else if (command == "show") {
 
-        } else if (command == "sort") {
+        }
+        else if (command == "sort") {
 
-        } else if (command == "filter") {
+        }
+        else if (command == "filter") {
 
-        } else if (command == "help") {
+        }
+        else if (command == "help") {
 
-        } else if (command == "save") {
+        }
+        else if (command == "save") {
 
-        } else {
+        }
+        else {
             cout << "You have entered an invalid command, " << helper << endl;
         }
 
