@@ -68,7 +68,50 @@ int main() {
 
         }
         else if (command == "edit") {
+            if (tokens.size() != 6) {
+                cout << "Invalid edit command, " << helper << endl;
+                goto loopEnd;
+            }
 
+            priority pri;
+            try {
+                pri = enumsParser::parsePriority(tokens[5]);
+
+            }
+            catch (priorityParsingException &) {
+                cout << "invalid priority input, " << helper << endl;
+                goto loopEnd;
+            }
+
+            tm due{};
+            try {
+                due = parseDate(tokens[4]);
+            } catch (dateException &) {
+
+                cout << "invalid date input, " << helper << endl;
+                goto loopEnd;
+            }
+
+            int id;
+
+            try {
+                id = stoi(tokens[1]);
+            } catch (const std::invalid_argument &) {
+                cout << "Invalid ID, " << helper << endl;
+                goto loopEnd;
+            }
+
+            todoItem newItem(tokens[2], tokens[3], due, pri);
+
+            try {
+                list.editItem(id, newItem);
+                list.sortBy("addition");
+                cout << "\nItem edited successfully." << std::endl;
+            }
+            catch (editException &) {
+                cout << "item not found" << endl;
+                goto loopEnd;
+            }
         }
         else if (command == "progress") {
 
