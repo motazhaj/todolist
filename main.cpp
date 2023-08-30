@@ -93,7 +93,9 @@ int main() {
 
         }
         else if (command == "save") {
-
+            cout << "Saving..." << endl;
+            list.sortBy("addition");
+            list.save();
         }
         else {
             cout << "You have entered an invalid command, " << helper << endl;
