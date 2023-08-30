@@ -1,12 +1,20 @@
 #include "todoListHeaders.h"
 #include "cParser.h"
+#include "enumParser.h"
+#include "todoItem.h"
+#include "todoList.h"
+#include "date.h"
+
+using std::cout;
+using std::endl;
+using std::vector;
 
 float version = 0.5;
 
 int main() {
 
     string input;
-//    todoList list;
+    todoList list;
     vector<string> tokens;
     string command;
 
@@ -38,6 +46,25 @@ int main() {
             break;
         }
         else if (command == "add") {
+            if (tokens.size() != 5) {
+                cout << "Invalid add command, " << helper << endl;
+                goto loopEnd;
+            }
+
+            try {
+                priority pri = enumsParser::parsePriority(tokens[4]);
+                tm due = parseDate(tokens[3]);
+                todoItem newItem(tokens[1], tokens[2], due, pri);
+                list.addItem(newItem);
+                list.sortBy("addition");
+                std::cout << "\nItem " << tokens[1] << " added successfully." << std::endl;
+            }
+            catch (priorityParsingException &e) {
+                cout << "invalid priority input, " << helper << endl;
+            }
+            catch (dateException &) {
+                cout << "invalid date input, " << helper << endl;
+            }
 
         }
         else if (command == "edit") {
@@ -68,6 +95,7 @@ int main() {
             cout << "You have entered an invalid command, " << helper << endl;
         }
 
+        loopEnd:
         cout << divider;
 
     }
