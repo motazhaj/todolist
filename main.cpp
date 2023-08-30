@@ -77,7 +77,11 @@ int main() {
 
         }
         else if (command == "show") {
-
+            try {
+                list.display();
+            } catch (displayException &) {
+                cout << "list is empty" << endl;
+            }
         }
         else if (command == "sort") {
 
