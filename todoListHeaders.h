@@ -10,8 +10,6 @@ using std::cout;
 using std::endl;
 using std::vector;
 
-
-float version = 0.5;
 const std::string filePath = R"(todo_list.txt)";
 
 const string divider = "\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n";
