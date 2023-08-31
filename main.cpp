@@ -178,7 +178,19 @@ int main() {
             }
         }
         else if (command == "filter") {
+            if (tokens.size() != 2) {
+                cout << "Invalid filter command, " << helper << endl;
+                goto loopEnd;
+            }
 
+            try {
+
+                list.filterBy(tokens[1]);
+
+            } catch (filteringException &) {
+                cout << "This filtering method is not valid, " << helper << endl;
+                goto loopEnd;
+            }
         }
         else if (command == "help") {
 
