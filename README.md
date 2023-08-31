@@ -1,5 +1,116 @@
 # Todo List CLI App Assignment *Requirements below.
-## not finished
+
+## To Do
+1. **closer output to requirement**
+2. **More Encapsulation Concept (Clean up main)**
+3. **Weather implementation**
+
+- `Example Output:`
+
+```shell
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Todo List version: 0.5
+
+Loading...
+
+List loaded successfully.
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Enter a command ('help' for commands, 'quit' to exit)
+Command: show
+
+1  : Do the laundry           : Very dirty                          By: 03-08-2023 | Is: High     | Is: Not Started
+2  : make the bed             : -                                   By: 08-08-2023 | Is: Low      | Is: Not Started
+3  : Make dinner              : fish and chips                      By: 15-08-2023 | Is: Medium   | Is: Not Started
+4  : feed the cat             : from the fish and chips             By: 02-08-2023 | Is: Low      | Is: Not Started
+5  : clean the bathroom       : may god help you                    By: 06-08-2023 | Is: High     | Is: In Progress
+6  : Buy groceries            : its on a list on the fridge         By: 01-08-2023 | Is: Medium   | Is: Not Started
+7  : Claim free games         : On EpicGames                        By: 20-08-2023 | Is: High     | Is: Done
+8  : Pay electricity bill     : Using banking app                   By: 10-08-2023 | Is: High     | Is: Not Started
+9  : Make Coffee              : With milk                           By: 31-07-2023 | Is: Medium   | Is: Not Started
+10 : Eat healthy              : in fridge                           By: 30-07-2023 | Is: High     | Is: Not Started
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Command: additem
+
+You have entered an invalid command, please use "help" command to guide you!
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Command: help
+
+Note that commands & priority are case sensitive
+
+
+Commands:
+
+add "Title" "Description" "Due date: dd-mm-yyyy" "Priority, low/medium/high"
+
+edit "Item id" "Title" "Description" "Due date: dd-mm-yyyy" "Priority: low/medium/high"
+
+delete "Item id"
+
+progress "Item id" "not started/in progress/done"
+
+show
+
+sort "addition/priority/progress"
+
+filter priority "priority high/priority medium/priority low" or progress "not started/in progress/done"
+
+save
+
+quit
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Command: add "pick up sister" "she's at her school" 10-8-2023 high
+
+
+Item added successfully.
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Command: show
+
+1  : Do the laundry           : Very dirty                          By: 03-08-2023 | Is: High     | Is: Not Started
+2  : make the bed             : -                                   By: 08-08-2023 | Is: Low      | Is: Not Started
+3  : Make dinner              : fish and chips                      By: 15-08-2023 | Is: Medium   | Is: Not Started
+4  : feed the cat             : from the fish and chips             By: 02-08-2023 | Is: Low      | Is: Not Started
+5  : clean the bathroom       : may god help you                    By: 06-08-2023 | Is: High     | Is: In Progress
+6  : Buy groceries            : its on a list on the fridge         By: 01-08-2023 | Is: Medium   | Is: Not Started
+7  : Claim free games         : On EpicGames                        By: 20-08-2023 | Is: High     | Is: Done
+8  : Pay electricity bill     : Using banking app                   By: 10-08-2023 | Is: High     | Is: Not Started
+9  : Make Coffee              : With milk                           By: 31-07-2023 | Is: Medium   | Is: Not Started
+10 : Eat healthy              : in fridge                           By: 30-07-2023 | Is: High     | Is: Not Started
+11 : pick up sister           : she's at her school                 By: 10-08-2023 | Is: High     | Is: Not Started
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Command: progress 1 done
+
+progress successfully set to:  done
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Command: show
+
+1  : Do the laundry           : Very dirty                          By: 03-08-2023 | Is: High     | Is: Done
+2  : make the bed             : -                                   By: 08-08-2023 | Is: Low      | Is: Not Started
+3  : Make dinner              : fish and chips                      By: 15-08-2023 | Is: Medium   | Is: Not Started
+4  : feed the cat             : from the fish and chips             By: 02-08-2023 | Is: Low      | Is: Not Started
+5  : clean the bathroom       : may god help you                    By: 06-08-2023 | Is: High     | Is: In Progress
+6  : Buy groceries            : its on a list on the fridge         By: 01-08-2023 | Is: Medium   | Is: Not Started
+7  : Claim free games         : On EpicGames                        By: 20-08-2023 | Is: High     | Is: Done
+8  : Pay electricity bill     : Using banking app                   By: 10-08-2023 | Is: High     | Is: Not Started
+9  : Make Coffee              : With milk                           By: 31-07-2023 | Is: Medium   | Is: Not Started
+10 : Eat healthy              : in fridge                           By: 30-07-2023 | Is: High     | Is: Not Started
+11 : pick up sister           : she's at her school                 By: 10-08-2023 | Is: High     | Is: Not Started
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Command: quit
+
+Do you want to save before quitting(y/n)/(any other key to cancel): y
+saving...
+quitting...
+Press Enter to exit...
+```
 
 # Todo List Console App Requirements
 
@@ -7,8 +118,8 @@
 2. **Todo Item Modification:** Users should be able to edit the details of a todo item after it has been created.
 3. **Todo Item Deletion:** Users should have the ability to delete a todo item.
 4. **Listing Todo Items:** The app should provide users with a way to see all their todo items. This should include:
-    - A way to sort by due date, creation date, priority, and status.
-    - A way to filter by status and priority.
+   - A way to sort by due date, creation date, priority, and status.
+   - A way to filter by status and priority.
 5. **Error Handling:** The app should handle potential errors gracefully and provide users with meaningful error messages.
 6. **Weather Reminders:** The application should have a feature that allows the user to request weather forecasts which can help them plan their upcoming tasks. This feature will utilize a weather API to fetch forecast data based on the user's provided location.
 7. **Exit:** Users should be able to exit the application safely without losing data.
