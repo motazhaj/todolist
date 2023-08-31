@@ -193,7 +193,40 @@ int main() {
             }
         }
         else if (command == "help") {
+            cout << "Note that commands & priority are case sensitive" << endl;//TODO fix the case sensitivity
 
+            cout << endl;
+            cout << "\nCommands:" << endl;
+
+            cout << endl;
+            cout << R"(add "Title" "Description" "Due date: dd-mm-yyyy" "Priority, low/medium/high")" << endl;
+
+            cout << endl;
+            cout << R"(edit "Item id" "Title" "Description" "Due date: dd-mm-yyyy" "Priority: low/medium/high")"
+                 << endl;
+
+            cout << endl;
+            cout << "delete \"Item id\"" << endl;
+
+            cout << endl;
+            cout << R"(progress "Item id" "not started/in progress/done")" << endl;
+
+            cout << endl;
+            cout << "show" << endl;
+
+            cout << endl;
+            cout << "sort \"addition/priority/progress\" " << endl;
+
+            cout << endl;
+            cout
+                    << R"(filter priority "priority high/priority medium/priority low" or progress "not started/in progress/done" )"
+                    << endl;
+
+            cout << endl;
+            cout << "save" << endl;
+
+            cout << endl;
+            cout << "quit" << endl;
         }
         else if (command == "save") {
             cout << "Saving..." << endl;
