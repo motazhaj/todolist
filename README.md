@@ -1,7 +1,7 @@
 # Todo List CLI App Assignment *Requirements below.
 
 ## To Do
-1. **closer output to requirement**
+1. **Closer output to requirement**
 2. **More Encapsulation Concept (Clean up main)**
 3. **Weather implementation**
 
