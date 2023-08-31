@@ -1,3 +1,5 @@
+#include <limits>
+
 #include "todoListHeaders.h"
 #include "cParser.h"
 #include "enumParser.h"
@@ -43,7 +45,31 @@ int main() {
         cout << endl;
 
         if (command == "quit") {
-            break;
+            cout << "Do you want to save before quitting(y/n)/(any other key to cancel): ";
+            char qInput;
+            std::cin >> qInput;
+            qInput = tolower(qInput);
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+            if (qInput == 'y') {
+                cout << "saving..." << endl;
+                list.sortBy("addition");
+                list.save();
+                cout << "quitting..." << endl;
+                std::cout << "Press Enter to exit...";
+                std::cin.get();
+                return 0;
+            } else if (qInput == 'n') {
+
+                cout << "quitting..." << endl;
+                std::cout << "\nPress Enter to exit...";
+                std::cin.get();
+                return 0;
+
+            } else {
+                cout << "Quit cancelled." << endl;
+                goto loopEnd;
+            }
         }
         else if (command == "add") {
             if (tokens.size() != 5) {
