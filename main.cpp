@@ -115,6 +115,25 @@ int main() {
         }
         else if (command == "progress") {
 
+            int id;
+
+            try {
+                id = stoi(tokens[1]);
+            } catch (const std::invalid_argument &) {
+                cout << "Invalid ID, " << helper << endl;
+                goto loopEnd;
+            }
+
+            try {
+                list.setProgress(id, tokens[2]);
+                cout << "progress successfully set to:  " << tokens[2] << endl;
+            } catch (progressException &) {
+                cout << "invalid progress type, " << helper << endl;
+                goto loopEnd;
+            } catch (progressExceptionId &) {
+                cout << "item is not in the list" << endl;
+                goto loopEnd;
+            }
         }
         else if (command == "delete") {
 
