@@ -136,7 +136,23 @@ int main() {
             }
         }
         else if (command == "delete") {
+            int id;
 
+            try {
+                id = stoi(tokens[1]);
+            } catch (const std::invalid_argument &) {
+                cout << "Invalid ID, " << helper << endl;
+                goto loopEnd;
+            }
+
+            try {
+                list.deleteItem(id);
+                cout << "item at id = " << id << " has been deleted successfully." << endl;
+            }
+            catch (deleteException &) {
+                cout << "item is not in the list" << endl;
+                goto loopEnd;
+            }
         }
         else if (command == "show") {
             try {
