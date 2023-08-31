@@ -162,7 +162,20 @@ int main() {
             }
         }
         else if (command == "sort") {
+            if (tokens.size() != 2) {
 
+                cout << "Invalid sort command, " << helper << endl;
+                goto loopEnd;
+            }
+
+            try {
+                list.sortBy(tokens[1]);
+
+                cout << "list has been sorted by " << tokens[1] << " successfully " << endl;
+            } catch (sortingException &) {
+                cout << "This sorting method is not valid, " << helper << endl;
+                goto loopEnd;
+            }
         }
         else if (command == "filter") {
 
